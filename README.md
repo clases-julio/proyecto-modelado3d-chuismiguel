@@ -17,6 +17,22 @@ Lo primero en construirse fue el chasis. Para ello, se realizó una funcion para
 
 El posterior trabajo fue implementar las ruedas de oruga. Fue un trabajo complejo. Primero, había que realizar las tiras superiores e inferiores. Para ello, se crea un pequeño cubo rectangular que utilizando un bucle for, se copia y se repite a lo largo de la union entre ruedas. Tuvimos que añadir un ínfimo cambio en la posicion Z en cada iteración del bucle para hacer que la oruga se adecuase a ambas ruedas (la rueda trasera es más grande que la delantera).
 
+El código es el siguiente:
+
+```
+for x in range(0, 38):
+        z = x/140.0
+        x = x/9.0
+        singleTrack((0 + x, -2, 2.9 + z), "track top " + str(x))
+        track_ids.append("track top " + str(x))
+    
+for x in range(0, 38):
+    z = x/140.0
+    x = x/9.0
+    singleTrack((0 + x, -2, 1.1 - z), "track bot " + str(x))
+    track_ids.append("track bot " + str(x))  
+```
+        
 Tras esto, el problema venía al hacer las orugas que cubrieran la parte circular de la rueda. Para ello, la solución fue, utilizando GeoGebra, obtener una función que generase una parábola horizontal para modificar la posición X en el bucle for e incrementar la posición Z un valor pequeño para que se recorriese la parábola. En GeoGebra, la parábola era la siguiente:
 
 ![image](https://user-images.githubusercontent.com/78983070/158608100-9bf49e9a-3943-4dbc-8921-ab43bc81e581.png)
@@ -27,6 +43,41 @@ Alternando el 10 por el que se divide, se consigue una parábola más o menos am
   
   -> Una parábola que comenzara en el centro y fuese hacia debajo hasta conectar con la oruga horizontal inferior.
   
+Este era el codigo que generaba las cuatro parabolas de cada oruga (dos en la rueda delantera, dos en la rueda trasera) para la rueda izquierda. Para la derecha, el código es exactamente igual pero cambiando la posición Y. También tuvimos que añadir un único bloque de oruga porque se quedaba un hueco entre las dos parábolas sin rellenar:
+
+```
+for x in range(0, 10):
+        z = x/10.0
+        x = -((x-1)*(x-1))/85.0
+        singleTrack((-0.9 - x, -2, 2 + z), "left curved top " + str(x))
+        track_ids.append("left curved top " + str(x))  
+        
+    for x in range(0, 10):
+        z = -x/10.0
+        x = -((x-1)*(x-1))/85.0
+        singleTrack((-0.9 - x, -2, 2 + z), "left curved bot " + str(x))
+        track_ids.append("left curved bot " + str(x))
+        
+    singleTrack((-0.9, -2, 2), "middle left curved " + str(x))
+    track_ids.append("middle left curved " + str(x))
+    
+    for x in range(0, 13):
+        z = x/10.3
+        x = ((x-1)*(x-1))/139.0
+        singleTrack((5.1 - x, -2, 2 + z), "right curved top " + str(x))
+        track_ids.append("right curved top " + str(x))  
+        
+    for x in range(0, 13):
+        z = -x/10.3
+        x = ((x-1)*(x-1))/139.0
+        singleTrack((5.1 - x, -2, 2 + z), "right curved bot " + str(x))
+        track_ids.append("right curved bot " + str(x))
+        
+    singleTrack((5.1, -2, 2), "middle right curved " + str(x))
+    track_ids.append("middle right curved " + str(x))
+
+```
+
 Para la rueda trasera bastó con cambiar la orientación del crecimiento de las X y hacer algo más ancha la parábola. Copiando y pegando alterando la posición Y obtuvimos las orugas de ambos lados del robot.
 
 Este es el resultado final:
