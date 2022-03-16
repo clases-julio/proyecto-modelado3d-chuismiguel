@@ -28,7 +28,6 @@ def borrarObjetos(): # Borrar todos los objetos
         bpy.ops.object.delete(use_global=False)
         
 def juntarObjetos(nombres):
-    deseleccionarTodos()
     seleccionarMultiples(nombres)
     bpy.ops.object.join()
 
@@ -103,7 +102,11 @@ class Objeto:
     def crearCilindro(objName):
         bpy.ops.mesh.primitive_cylinder_add(location=(0, 0, 0), scale=(1, 1, 1))
         Activo.renombrar(objName)
-
+        
+    def crearPlano(objName):
+        bpy.ops.mesh.primitive_plane_add(location=(0, 0, 0), scale=(1, 1, 1))
+        Activo.renombrar(objName)
+    
 '''************'''
 ''' M  A  I  N '''
 '''************'''
