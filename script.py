@@ -71,6 +71,9 @@ def createChassis():
     createUltrasound(-0.3, 0 ,2)
     
 def singleTrack(position, id):
+    for o in bpy.context.scene.objects:
+        if o.name == id:
+            return
     Objeto.crearCubo(id)
     Especifico.escalar(id, (0.2, 1, 0.3))
     Especifico.posicionar(id, position)
