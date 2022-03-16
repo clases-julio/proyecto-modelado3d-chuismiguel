@@ -32,3 +32,14 @@ Para la rueda trasera bastó con cambiar la orientación del crecimiento de las 
 Este es el resultado final:
 
 ![image](https://user-images.githubusercontent.com/78983070/158606736-c513c429-f3e4-4481-b626-9e993e088f7d.png)
+
+Posteriormente, construimos el cuerpo del robot, la cabeza y los brazos. El cuerpo del robot es una combinación de cubos variados, algunos orientados y algún cilindro para variar. Traté de modificarlos cortando para aportar una superficie más agradable a la vista pero fue imposible hacerlo mediante comandos.
+
+La cabeza es un cilindro con un pequeño panel que representa la pantalla del robot. Dicha pantalla puede representar emociones, como la que hay cargada en la textura del robot en blender o en el fichero happy.png.
+
+Para aportar rigidez a lo que luego será la pinza, hemos creado dos brazos iguales en diferentes alturas. También se han modificado ligeramente el escalado de las orugas para que se acoplen perfectamente al surco que teníamos en las ruedas. 
+
+El progreso es el siguiente:
+
+![image](https://user-images.githubusercontent.com/78983070/158655683-a3e939b3-d9e5-4bdf-acbb-06a8ec0247b5.png)
+
