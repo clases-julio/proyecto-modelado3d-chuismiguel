@@ -22,7 +22,9 @@ Tras esto, el problema venía al hacer las orugas que cubrieran la parte circula
 ![image](https://user-images.githubusercontent.com/78983070/158607457-5f13f394-d97f-4648-b6e4-f93cded2627b.png)
 
 Alternando el 10 por el que se divide, se consigue una parábola más o menos amplia. Tras probar, tuvimos que originar dos parabolas por rueda:
+
   -> Una parábola que comenzara en el centro y fuese hacia arriba hasta conectar con la oruga horizontal superior.
+  
   -> Una parábola que comenzara en el centro y fuese hacia debajo hasta conectar con la oruga horizontal inferior.
   
 Para la rueda trasera bastó con cambiar la orientación del crecimiento de las X y hacer algo más ancha la parábola. Copiando y pegando alterando la posición Y obtuvimos las orugas de ambos lados del robot.
