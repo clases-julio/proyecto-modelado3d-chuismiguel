@@ -47,3 +47,21 @@ Visto con renderizado, de momento solo vemos la cara del robot:
 
 ![image](https://user-images.githubusercontent.com/78983070/158656675-80a9ee31-d904-4e91-b52e-9eaf16c77d9c.png)
 
+El siguiente añadido fue el "gripper", que es el final de los brazos que incluye unos salientes para que el robot pueda manipular ligeramente objetos, como Vector hace con su cubo. También acabamos de cerrar el robot por arriba. Echándole un vistazo con el lateral le vi un cierto parecido a Mate, de Cars, por lo que decidí también hacerle una pequeña grúa que se podría manipular con un motor paso a paso, ya que la grúa también tiene su cuerda diseñada.
+
+![image](https://user-images.githubusercontent.com/78983070/158667958-62fc4328-008b-41b5-86b7-33df4a7b4f21.png)
+
+Con esto podemos dar por acabado el diseño del robot. Todo el diseño se puede hacer ejecutando el script script.py
+
+Ahora, el objetivo es darle unas texturas y unos colores bonitos para que el renderizado en blender se vea curioso. Vector es un robot totalmente negro, pero yo he decidido agregarle más colores para poder tener un robot algo más vivo. Es por esto por lo que durante el desarrollo del script, cuidadosamente he ido juntando las diferentes partes y no añadiendolas al modelo completamente, para poder pintarlas una a una.
+
+Tras aplicarle unas tonalidades 'mate', este es el resultado final del robot:
+
+![image](https://user-images.githubusercontent.com/78983070/158675476-e975cc1c-1253-44e2-8d97-f089d0ac9151.png)
+![image](https://user-images.githubusercontent.com/78983070/158675507-8f637159-b62e-4c94-93fc-2c46145ff9af.png)
+![image](https://user-images.githubusercontent.com/78983070/158675581-70c9356f-d0fa-4eb6-b396-a0c984f81c45.png)
+![image](https://user-images.githubusercontent.com/78983070/158675599-29a80307-d9f4-44c4-b9fd-1c640117da09.png)
+
+Si quisieras usar este modelo para cualquier cosa, para cargar las texturas tienes que hacerlo manualmente. Todas las partes del robot tienen las texturas ya creadas, con su mismo nombre. Las dos orugas utilizan la textura 'track', y los brazos y el gripper utilizan ambos la textura 'arm'.
+
+
