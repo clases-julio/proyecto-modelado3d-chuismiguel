@@ -3,7 +3,9 @@
 
 Para el semiproyecto final que debemos realizar para la asignatura Modelado y Simulación de Robots, he utilizado la herramienta Blender para crear un pequeño robot mascota. El diseño del robot está basado en el famoso robot de Anki: Vector:
 <p align="center">
+  
 ![image](https://user-images.githubusercontent.com/78983070/158219741-21ab660d-deee-449f-b2b7-48704aabc00f.png)
+  
 </p>
 El objetivo para el proyecto era realizar un robot relativamente similar, que pudiese imprimirse en 3D y que tuviera algunos sensores incorporados para que pudiéramos contolar y programar diferentes aspectos de su funcionamiento.
 
