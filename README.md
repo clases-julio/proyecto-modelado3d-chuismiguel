@@ -19,7 +19,7 @@ El posterior trabajo fue implementar las ruedas de oruga. Fue un trabajo complej
 
 Tras esto, el problema venía al hacer las orugas que cubrieran la parte circular de la rueda. Para ello, la solución fue, utilizando GeoGebra, obtener una función que generase una parábola horizontal para modificar la posición X en el bucle for e incrementar la posición Z un valor pequeño para que se recorriese la parábola. En GeoGebra, la parábola era la siguiente:
 
-![image](https://user-images.githubusercontent.com/78983070/158607457-5f13f394-d97f-4648-b6e4-f93cded2627b.png)
+![image](https://user-images.githubusercontent.com/78983070/158608100-9bf49e9a-3943-4dbc-8921-ab43bc81e581.png)
 
 Alternando el 10 por el que se divide, se consigue una parábola más o menos amplia. Tras probar, tuvimos que originar dos parabolas por rueda:
 
