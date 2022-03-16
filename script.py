@@ -1,6 +1,6 @@
 import bpy
 import sys
-sys.path.append('/home/chuismi/Desktop/robotica/tercero/segundocuat/modelado')
+sys.path.append('/home/chuismi/Desktop/robotica/tercero/segundocuat/modelado/proyecto-modelado3d-chuismiguel')
 from transformaciones import *
 
 PI = 3.1416
@@ -43,9 +43,9 @@ def createUltrasound(x, y, z):
     Especifico.rotar("us der", (0, -PI/2, 0))
     Especifico.escalar("us der", (0.15, 0.15, 0.1))
     
-    juntarObjetos(["us der", "us izq", "base us"])
+    juntarObjetos(["us der", "us izq"])
     for obj in bpy.context.selected_objects:
-        obj.name = "ultrasound"
+        obj.name = "us_cylinders"
     
     
 def createChassis():
@@ -63,14 +63,13 @@ def createChassis():
     Especifico.posicionar("chassis", (2, 0, 2))
     Especifico.posicionar("chassis", (2, 0, 2))
     
-    createUltrasound(-0.3, 0 ,2)
-    
-    juntarObjetos(["RightFrontTyre", "LeftFrontTyre", "RightRearTyre", "LeftRearTyre", "chassis", "ultrasound"])
+    juntarObjetos(["RightFrontTyre", "LeftFrontTyre", "RightRearTyre", "LeftRearTyre", "chassis"])
         
     for obj in bpy.context.selected_objects:
         obj.name = "full_chassis"
         
-
+    createUltrasound(-0.3, 0 ,2)
+    
 def singleTrack(position, id):
     Objeto.crearCubo(id)
     Especifico.escalar(id, (0.2, 1, 0.3))
@@ -151,6 +150,7 @@ def createLeftTrack():
     for obj in bpy.context.selected_objects:
         obj.name = "oruga_izq"
         
+    track_ids.clear()
 def createRightTrack():
     
     track_ids = []
@@ -237,9 +237,6 @@ def createHead():
     Especifico.rotar("face", (0, PI/2, 0))
     Especifico.posicionar("face", (-0.5,0,4.6))
     Especifico.escalar("face", (0.3,0.4,1))
-    
-    bpy.ops.material.new()
-    bpy.ops.image.open(filepath="//happy.png", directory="/home/chuismi/Desktop/robotica/tercero/segundocuat/modelado/proyecto-modelado3d-chuismiguel/", files=[{"name":"happy.png", "name":"happy.png"}], relative_path=True, show_multiview=False)
     
 def createBody():
     Objeto.crearCubo("head rest")
