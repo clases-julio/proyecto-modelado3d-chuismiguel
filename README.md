@@ -55,4 +55,13 @@ Con esto podemos dar por acabado el diseño del robot. Todo el diseño se puede 
 
 Ahora, el objetivo es darle unas texturas y unos colores bonitos para que el renderizado en blender se vea curioso. Vector es un robot totalmente negro, pero yo he decidido agregarle más colores para poder tener un robot algo más vivo. Es por esto por lo que durante el desarrollo del script, cuidadosamente he ido juntando las diferentes partes y no añadiendolas al modelo completamente, para poder pintarlas una a una.
 
+Tras aplicarle unas tonalidades 'mate', este es el resultado final del robot:
+
+![image](https://user-images.githubusercontent.com/78983070/158675476-e975cc1c-1253-44e2-8d97-f089d0ac9151.png)
+![image](https://user-images.githubusercontent.com/78983070/158675507-8f637159-b62e-4c94-93fc-2c46145ff9af.png)
+![image](https://user-images.githubusercontent.com/78983070/158675581-70c9356f-d0fa-4eb6-b396-a0c984f81c45.png)
+![image](https://user-images.githubusercontent.com/78983070/158675599-29a80307-d9f4-44c4-b9fd-1c640117da09.png)
+
+Si quisieras usar este modelo para cualquier cosa, para cargar las texturas tienes que hacerlo manualmente. Todas las partes del robot tienen las texturas ya creadas, con su mismo nombre. Las dos orugas utilizan la textura 'track', y los brazos y el gripper utilizan ambos la textura 'arm'.
+
 
