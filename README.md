@@ -47,3 +47,8 @@ Visto con renderizado, de momento solo vemos la cara del robot:
 
 ![image](https://user-images.githubusercontent.com/78983070/158656675-80a9ee31-d904-4e91-b52e-9eaf16c77d9c.png)
 
+El siguiente añadido fue el "gripper", que es el final de los brazos que incluye unos salientes para que el robot pueda manipular ligeramente objetos, como Vector hace con su cubo. También acabamos de cerrar el robot por arriba. Echándole un vistazo con el lateral le vi un cierto parecido a Mate, de Cars, por lo que decidí también hacerle una pequeña grúa que se podría manipular con un motor paso a paso, ya que la grúa también tiene su cuerda diseñada.
+
+![image](https://user-images.githubusercontent.com/78983070/158667958-62fc4328-008b-41b5-86b7-33df4a7b4f21.png)
+
+
