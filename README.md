@@ -51,4 +51,8 @@ El siguiente añadido fue el "gripper", que es el final de los brazos que incluy
 
 ![image](https://user-images.githubusercontent.com/78983070/158667958-62fc4328-008b-41b5-86b7-33df4a7b4f21.png)
 
+Con esto podemos dar por acabado el diseño del robot. Todo el diseño se puede hacer ejecutando el script script.py
+
+Ahora, el objetivo es darle unas texturas y unos colores bonitos para que el renderizado en blender se vea curioso. Vector es un robot totalmente negro, pero yo he decidido agregarle más colores para poder tener un robot algo más vivo. Es por esto por lo que durante el desarrollo del script, cuidadosamente he ido juntando las diferentes partes y no añadiendolas al modelo completamente, para poder pintarlas una a una.
+
 
