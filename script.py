@@ -248,12 +248,12 @@ def createBody():
     Especifico.escalar("head rest", (1, 6.5, 2))
     
     Objeto.crearCubo("left side")
-    Especifico.posicionar("left side", (1, -1.39, 4))
-    Especifico.escalar("left side", (4, 1, 5))
+    Especifico.posicionar("left side", (1, -1.39, 4.2))
+    Especifico.escalar("left side", (4, 1, 5.7))
     
     Objeto.crearCubo("right side")
-    Especifico.posicionar("right side", (1, 1.39, 4))
-    Especifico.escalar("right side", (4, 1, 5))
+    Especifico.posicionar("right side", (1, 1.39, 4.2))
+    Especifico.escalar("right side", (4, 1, 5.7))
     
     Objeto.crearCubo("left end")
     Especifico.posicionar("left end", (3.25, -1.39, 3.5))
@@ -272,7 +272,11 @@ def createBody():
     Especifico.posicionar("back cover", (3.25, 0, 4.3))
     Especifico.escalar("back cover", (5, 6.67, 0.7))
     
-    juntarObjetos(["head rest", "left side", "right side", "left end", "right end", "back end", "back cover"])
+    Objeto.crearCubo("top cover")
+    Especifico.posicionar("top cover", (1, 0, 5.7))
+    Especifico.escalar("top cover", (4, 6.67, 0.7))
+    
+    juntarObjetos(["head rest", "left side", "right side", "left end", "right end", "back end", "back cover", "top cover"])
     for obj in bpy.context.selected_objects:
         obj.name = "bodywork"
 
@@ -310,15 +314,92 @@ def createArms():
     for obj in bpy.context.selected_objects:
         obj.name = "arms"
     
+
+def createGripper():
+    Objeto.crearCubo("left side")
+    Especifico.posicionar("left side", (-1.4, -1.8,  2.5))
+    Especifico.escalar("left side", (0.9, 0.9, 5))
+    
+    Objeto.crearCubo("right side")
+    Especifico.posicionar("right side", (-1.4, 1.8,  2.5))
+    Especifico.escalar("right side", (0.9, 0.9, 5))
+    
+    Objeto.crearCubo("bottom")
+    Especifico.posicionar("bottom", (-1.4, 0, 1.48))
+    Especifico.escalar("bottom", (0.9, 7, 0.9))
+    
+    Objeto.crearCubo("left clamp")
+    Especifico.rotar("left clamp",(0, -PI/7, 0) )
+    Especifico.posicionar("left clamp", (-1.7, -1.57, 2.8))
+    Especifico.escalar("left clamp", (0.2, 0.2, 1.5))
+    
+    Objeto.crearCubo("right clamp")
+    Especifico.rotar("right clamp",(0, -PI/7, 0) )
+    Especifico.posicionar("right clamp", (-1.7, 1.57, 2.8))
+    Especifico.escalar("right clamp", (0.2, 0.2, 1.5))
+    
+    juntarObjetos(["right clamp", "left clamp", "bottom", "right side", "left side"])
+    for obj in bpy.context.selected_objects:
+        obj.name = "gripper"
+    
+def createHook():
+    Objeto.crearCubo("top")
+    Especifico.posicionar("top", (5.5, 0, 5))
+    Especifico.escalar("top", (0.2, 0.2, 0.5))
+    
+    Objeto.crearCubo("right")
+    Especifico.posicionar("right", (5.57, 0, 4.85))
+    Especifico.escalar("right", (0.5, 0.2, 0.2))
+    
+    Objeto.crearCubo("middle")
+    Especifico.posicionar("middle", (5.7, 0, 4.64))
+    Especifico.escalar("middle", (0.2, 0.2, 1))
+    
+    Objeto.crearCubo("bottom")
+    Especifico.rotar("bottom",(0, -PI/4, 0))
+    Especifico.posicionar("bottom", (5.6, 0, 4.35))
+    Especifico.escalar("bottom", (0.5, 0.2, 0.2))
+    
+    juntarObjetos(["top", "right", "middle", "bottom"])
+    for obj in bpy.context.selected_objects:
+        obj.name = "hook"
+    
+def createCrane():
+    Objeto.crearCubo("left guide")
+    Especifico.rotar("left guide",(0, PI/3, PI/10))
+    Especifico.posicionar("left guide", (4, -0.5, 5))
+    Especifico.escalar("left guide", (0.5, 0.5, 7))
+    
+    Objeto.crearCubo("right guide")
+    Especifico.rotar("right guide",(0, PI/3, -PI/10))
+    Especifico.posicionar("right guide", (4, 0.5, 5))
+    Especifico.escalar("right guide", (0.5, 0.5, 7))
+    
+    Objeto.crearCubo("rope 1")
+    Especifico.rotar("rope 1" ,(0, PI/3, 0))
+    Especifico.posicionar("rope 1" , (4, 0, 5))
+    Especifico.escalar("rope 1", (0.05, 0.05, 7))
+    
+    Objeto.crearCubo("rope 2")
+    Especifico.posicionar("rope 2" , (5.5, 0, 5.5))
+    Especifico.escalar("rope 2", (0.05, 0.05, 2))
+    
+    createHook()
+    
+    juntarObjetos(["left guide", "right guide", "rope 1", "rope 2", "hook"])
+    for obj in bpy.context.selected_objects:
+        obj.name = "crane"
+    
 def main():
     borrarObjetos()
     createChassis()
-    #createLeftTrack()
-    #createRightTrack()
+    createLeftTrack()
+    createRightTrack()
     createHead()
     createBody()
-    
     createArms()
+    createGripper()
+    createCrane()
     
 if __name__ == "__main__":
     main()
