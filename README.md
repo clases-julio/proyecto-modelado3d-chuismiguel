@@ -45,6 +45,5 @@ El progreso es el siguiente:
 
 Visto con renderizado, de momento solo vemos la cara del robot:
 
-![image](https://user-images.githubusercontent.com/78983070/158656601-3a665057-cedf-4b01-80fc-93e603ca2e91.png)
-
+![image](https://user-images.githubusercontent.com/78983070/158656675-80a9ee31-d904-4e91-b52e-9eaf16c77d9c.png)
 
